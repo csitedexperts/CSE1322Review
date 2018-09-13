@@ -5,6 +5,12 @@ public class TypeCastingEx3{
 	// Upcasting and downcasting with Number, Integer, Float etc.
 	 
 	public static void main(String[] args) {
+		double a = (int) (50.0 / 10.0);
+		System.out.println("a = " + a);
+		
+		int b = 28/(2%4);
+		System.out.println("b = " + b);
+		
 		Number n, n1;
 		Integer i = 5;
 		Double d = 2.5;
