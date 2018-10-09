@@ -1,8 +1,6 @@
 package linkedLists;
 // https://www.youtube.com/watch?v=195KUinjBpU
 
-import loopingProblems.Node;
-
 class Node {
 	// Set to public so getters & setters aren't needed
 	public String bookName;

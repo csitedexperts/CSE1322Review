@@ -1,26 +1,26 @@
-package loopingProblems;
+package linkedLists;
 import java.util.Scanner;
 
-class Node {
+class SNode {
 
-    Node link = null;
+    SNode link = null;
     int data = 0;
 
-    public Node() {
+    public SNode() {
         link = null;
         data = 0;
     }
 
-    public Node(int data, Node link) {
+    public SNode(int data, SNode link) {
         this.data = data;
         this.link = null;
     }
 
-    public Node getLink() {
+    public SNode getLink() {
         return link;
     }
 
-    public void setLink(Node link) {
+    public void setLink(SNode link) {
         this.link = link;
     }
 
@@ -36,8 +36,8 @@ class Node {
 
 class SinglyLinkedListImpl {
 
-    Node start = null;
-    Node end = null;
+    SNode start = null;
+    SNode end = null;
     int size = 0;
 
     public SinglyLinkedListImpl() {
@@ -47,7 +47,7 @@ class SinglyLinkedListImpl {
     }
 
     public void insertAtStart(int data) {
-        Node nptr = new Node(data, null);
+        SNode nptr = new SNode(data, null);
         if (start == null) {
             start = nptr;
             end = start;
@@ -59,7 +59,7 @@ class SinglyLinkedListImpl {
     }
 
     public void insertAtEnd(int data) {
-        Node nptr = new Node(data, null);
+        SNode nptr = new SNode(data, null);
         if (start == null) {
             start = nptr;
             end = nptr;
@@ -71,12 +71,12 @@ class SinglyLinkedListImpl {
     }
 
     public void insertAtPosition(int position, int data) {
-        Node nptr = new Node(data, null);
-        Node ptr = start;
+        SNode nptr = new SNode(data, null);
+        SNode ptr = start;
         position = position - 1;
         for (int i = 1; i < size; i++) {
             if (i == position) {
-                Node temp = ptr.getLink();
+                SNode temp = ptr.getLink();
                 ptr.setLink(nptr);
                 nptr.setLink(temp);
                 break;
@@ -92,7 +92,7 @@ class SinglyLinkedListImpl {
             return;
         }
 
-        Node ptr = start;
+        SNode ptr = start;
         for (int i = 1; i < size; i++) {
             if (i == position) {
                 ptr.setData(data);
@@ -108,8 +108,8 @@ class SinglyLinkedListImpl {
         }
 
         if (position == size) {
-            Node startPtr = start;
-            Node endPtr = start;
+            SNode startPtr = start;
+            SNode endPtr = start;
             while (startPtr != null) {
                 endPtr = startPtr;
                 startPtr = startPtr.getLink();
@@ -120,12 +120,12 @@ class SinglyLinkedListImpl {
             return;
         }
 
-        Node ptr = start;
+        SNode ptr = start;
         position = position - 1;
         for (int i = 1; i < size; i++) {
 
             if (i == position) {
-                Node temp = ptr.getLink();
+                SNode temp = ptr.getLink();
                 temp = temp.getLink();
                 ptr.setLink(temp);
                 break;
@@ -155,8 +155,8 @@ class SinglyLinkedListImpl {
         }
 
         if (end.getData() == data) {
-            Node startPtr = start;
-            Node endPtr = start;
+            SNode startPtr = start;
+            SNode endPtr = start;
 
             startPtr = startPtr.getLink();
             while (startPtr.getLink() != null) {
@@ -169,15 +169,15 @@ class SinglyLinkedListImpl {
             return;
         }
 
-        Node startPtr = start;
-        Node prevLink = startPtr;
+        SNode startPtr = start;
+        SNode prevLink = startPtr;
         startPtr = startPtr.getLink();
         while (startPtr.getData() != data && startPtr.getLink() != null) {
             prevLink = startPtr;
             startPtr = startPtr.getLink();
         }
         if (startPtr.getData() == data) {
-            Node temp = prevLink.getLink();
+            SNode temp = prevLink.getLink();
             temp = temp.getLink();
             prevLink.setLink(temp);
             size--;
@@ -198,7 +198,7 @@ class SinglyLinkedListImpl {
             return;
         }
 
-        Node ptr = start;
+        SNode ptr = start;
         System.out.print(ptr.getData() + "->");
         ptr = start.getLink();
         while (ptr.getLink() != null) {
@@ -219,7 +219,7 @@ class SinglyLinkedListImpl {
             return;
         }
 
-        Node ptr = start;
+        SNode ptr = start;
         for (int i = 1; i < size; i++) {
             if (i == position) {
                 System.out.println("Element at " + position + " is : " + ptr.getData());
@@ -246,7 +246,7 @@ class SinglyLinkedListImpl {
             return;
         }
 
-        Node startPtr = start;
+        SNode startPtr = start;
         int position = 0;
         while (startPtr.getLink() != null) {
             ++position;
@@ -263,7 +263,7 @@ class SinglyLinkedListImpl {
         System.out.println(data + " No found!");
     }
 
-    public void searchElementRecursively(Node start, int data, int count) {
+    public void searchElementRecursively(SNode start, int data, int count) {
 
         if (isEmpty()) {
             System.out.println("Empty!");
