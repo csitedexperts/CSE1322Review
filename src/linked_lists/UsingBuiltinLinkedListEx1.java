@@ -1,5 +1,6 @@
-package linkedLists;
+package linked_lists;
 import java.util.*;
+
 public class UsingBuiltinLinkedListEx1 {
      public static void main(String args[]) {
 
