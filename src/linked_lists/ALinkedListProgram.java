@@ -1,32 +1,31 @@
-package linkedLists;
-// https://www.youtube.com/watch?v=195KUinjBpU
+package linked_lists;
+//https://www.youtube.com/watch?v=195KUinjBpU
+
 
 class Node {
 	// Set to public so getters & setters aren't needed
-	public String bookName;
-	public int millionsSold;
-
+	public int id;
+	public String name;
+	
 	// Reference to next link made in the LinkList
 	// Holds the reference to the Link that was created before it
 	// Set to null until it is connected to other links
 
 	private Node next; 
 
-	public Node(String bookName, int millionsSold){
-		this.bookName = bookName;
-		this.millionsSold = millionsSold;
+	public Node(int id, String name){
+		this.id = id;
+		this.name = name;
+		this.next = null;   // null initialization
+		
 	}
 
 	public void display(){
-
-		System.out.println(bookName + ": " + millionsSold + ",000,000 Sold");
-
+		System.out.println("id: " + id + " name:" + name );
 	}
 
 	public String toString(){
-
-		return bookName;
-
+		return name;
 	}
 
 	public Node getNext() {
@@ -39,14 +38,14 @@ class Node {
 }
 
 
-public	class LinkedListEx1{
+public	class ALinkedListProgram{
 		
 		// Reference to first Link in list
 		// The last Link added to the LinkedList
 		
 		public Node firstLink; 
 		
-		LinkedListEx1(){
+		ALinkedListProgram(){
 					// Here to show the first Link always starts as null
 			firstLink = null;
 			
@@ -59,9 +58,9 @@ public	class LinkedListEx1{
 			
 		}
 		
-		public void insertFirstLink(String bookName, int millionsSold){
+		public void insertFirstLink(int id, String name){
 			
-			Node newLink = new Node(bookName, millionsSold);
+			Node newLink = new Node(id, name);
 			
 			// Connects the firstLink field to the new Link 
 			
@@ -119,7 +118,7 @@ public	class LinkedListEx1{
 			
 			if(!isEmpty()){
 			
-				while(theLink.bookName != bookName){
+				while(theLink.name != bookName){
 				
 					// Checks if at the end of the LinkedList
 				
@@ -157,7 +156,7 @@ public	class LinkedListEx1{
 			
 			// Keep searching as long as a match isn't made
 			
-			while(currentLink.bookName != bookName){
+			while(currentLink.name != bookName){
 				
 				// Check if at the last Link in the LinkedList
 				
@@ -210,16 +209,17 @@ public	class LinkedListEx1{
 	
 	public static void main(String[] args) {
 
-		LinkedListEx1 theLinkedList = new LinkedListEx1();
+		ALinkedListProgram theLinkedList = new ALinkedListProgram();
 
 		// Insert Link and add a reference to the book Link added just prior
 		// to the field next
 
-		theLinkedList.insertFirstLink("Don Quixote", 500);
-		theLinkedList.insertFirstLink("A Tale of Two Cities", 200);
-		theLinkedList.insertFirstLink("The Lord of the Rings", 150);
-		theLinkedList.insertFirstLink("Harry Potter and the Sorcerer's Stone", 107);
-
+		theLinkedList.insertFirstLink(1, "A");
+		theLinkedList.insertFirstLink(2, "B");
+		theLinkedList.insertFirstLink(3, "C");
+		theLinkedList.insertFirstLink(4, "D");
+		theLinkedList.insertFirstLink(5, "E");
+		
 		theLinkedList.display();
 
 		System.out.println("Value of first in LinkedList " + theLinkedList.firstLink + "\n");
@@ -230,11 +230,11 @@ public	class LinkedListEx1{
 
 		theLinkedList.display();
 
-		System.out.println(theLinkedList.find("The Lord of the Rings").bookName + " Was Found");
+		System.out.println(theLinkedList.find("C").name + " Was Found");
 
-		theLinkedList.removeLink("A Tale of Two Cities");
+		theLinkedList.removeLink("B");
 
-		System.out.println("\nA Tale of Two Cities Removed\n");
+		System.out.println("\nB Removed\n");
 
 		theLinkedList.display();
 
