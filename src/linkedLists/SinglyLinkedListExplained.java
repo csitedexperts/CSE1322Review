@@ -189,21 +189,79 @@ class LinkedList{
 
 	}
 
-
-	public Node removeLink(String bookName){
+	public Node removeById(int id){
 
 		Node currentLink = head;
 		Node previousLink = head;
 
 		// Keep searching as long as a match isn't made
 
-		while(currentLink.name != bookName){
+		while(currentLink.id != id){
 
 			// Check if at the last Link in the LinkedList
 
 			if(currentLink.next == null){
 
-				// bookName not found so leave the method
+				// id not found so leave the method
+
+				return null; 
+
+			} else {
+
+				// We checked here so let's look in the
+				// next Link on the list
+
+				previousLink = currentLink; 
+
+				currentLink = currentLink.next;
+
+			}
+
+		}
+
+		if(currentLink == head){
+
+			// If you are here that means there was a match
+			// in the reference stored in head in the
+			// LinkedList so just assign next to head
+
+			head = head.next;
+
+		} else {
+
+			// If you are here there was a match in a Link other 
+			// than the head. Assign the value of next for
+			// the Link you want to delete to the Link that's 
+			// next previously pointed to the reference to remove
+
+			System.out.println("FOUND A MATCH");
+			System.out.println("currentLink: " + currentLink);
+			System.out.println("head: " + head);
+			previousLink.next = currentLink.next; 
+
+			//			previousLink.setNext(currentLink.next);  // If use getter and setter
+
+		}
+
+		return currentLink;
+
+	}
+	
+
+	public Node removeByName(String name){
+
+		Node currentLink = head;
+		Node previousLink = head;
+
+		// Keep searching as long as a match isn't made
+
+		while(currentLink.name != name){
+
+			// Check if at the last Link in the LinkedList
+
+			if(currentLink.next == null){
+
+				// Name not found so leave the method
 
 				return null; 
 
@@ -259,7 +317,7 @@ public class SinglyLinkedListExplained {
 
 		LinkedList theLinkedList = new LinkedList();
 
-		// Insert Link and add a reference to the book Link added just prior
+		// Insert Link and add a reference to the name Link added just prior
 		// to the field next
 
 		theLinkedList.prepend(1, "A");
@@ -280,8 +338,8 @@ public class SinglyLinkedListExplained {
 
 		System.out.println(theLinkedList.findByName("C").name + " Was Found");
 
-		theLinkedList.removeLink("B");
-
+//		theLinkedList.removeByName("B");
+		theLinkedList.removeById(2);
 		System.out.println("\nB Removed\n");
 
 		theLinkedList.displayNodes();
