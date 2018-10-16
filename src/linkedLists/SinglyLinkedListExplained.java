@@ -1,15 +1,14 @@
 package linkedLists;
 
 class Node {
-	// Set to public so getters & setters aren't needed
 	int id;
 	String name;
+	Node next; 
 
 	// Reference to next link made in the LinkList
 	// Holds the reference to the Link that was created before it
 	// Set to null until it is connected to other links
 
-	Node next; 
 
 	public Node(int id, String name){
 		this.id = id;
@@ -17,7 +16,7 @@ class Node {
 	}
 
 
-	public void displayData(){
+	public void displayANode(){
 		System.out.println("id: " + id + " name:" + name );
 	}
 
@@ -34,7 +33,7 @@ class Node {
 class LinkedList{
 	// Reference to head in list
 	// The last Link added to the LinkedList
-	public Node head; 
+	Node head; 
 
 	LinkedList(){   // Optional 
 		head = null;  // null initialization
@@ -49,32 +48,34 @@ class LinkedList{
 	}
 
 	public void prepend(int id, String name){
-
+		if (head == null) {
+			head = new Node(id, name);
+			return; 
+		}
 		Node newHead = new Node(id, name);
-		// Connects the head field to the newhead 
+		// Connects the head field to the newHead 
 		newHead.next = head;
 		//		newHead.setNext(head);  // If you use setter
-
 		head = newHead;
-
 	}
 
 
 	public void append(int id, String name){
-
-		Node newHead = new Node(id, name);
-		// Connects the head field to the newhead 
-		newHead.next = head;
-		//		newHead.setNext(head);  // If you use setter
-
-		head = newHead;
-
+		if (head == null) {
+			head = new Node(id, name);
+			return; 
+		}
+		Node currentNode = head;
+		while(currentNode.next != null) {
+			currentNode = currentNode.next;
+		}
+		currentNode.next = new Node(id, name);
 	}
 
-	
+
 	public Node removeFirst(){
 
-		Node linkReference = head;
+		Node deleteLink = head;
 
 		if(!isEmpty()){
 
@@ -88,25 +89,25 @@ class LinkedList{
 
 		}
 
-		return linkReference;
+		return deleteLink;
 
 	}
 
-	public void displayNodes(){
+	public void displayAllNodes(){
 
-		Node theLink = head;
+		Node theNode = head;
 
 		// Start at the reference stored in head and
 		// keep getting the references stored in next for
 		// every Link until next returns null
 
-		while(theLink != null){
+		while(theNode != null){
 
-			theLink.displayData();
+			theNode.displayANode();
 
-			System.out.println("Next Link: " + theLink.next);
+			System.out.println("Next Link: " + theNode.next);
 
-			theLink = theLink.next;
+			theNode = theNode.next;
 
 			System.out.println();
 
@@ -116,15 +117,15 @@ class LinkedList{
 
 	public Node findById(String id){
 
-		Node theLink = head;
+		Node theNode = head;
 
 		if(!isEmpty()){
 
-			while(theLink.name != id){
+			while(theNode.name != id){
 
 				// Checks if at the end of the LinkedList
 
-				if(theLink.next == null){
+				if(theNode.next == null){
 
 					// Got to the end of the Links in LinkedList
 					// without finding a match
@@ -135,7 +136,7 @@ class LinkedList{
 
 					// Found a matching Link in the LinkedList
 
-					theLink = theLink.next;
+					theNode = theNode.next;
 
 				}
 
@@ -147,7 +148,7 @@ class LinkedList{
 
 		}
 
-		return theLink;
+		return theNode;
 
 	}
 
@@ -190,6 +191,7 @@ class LinkedList{
 	}
 
 	public Node removeById(int id){
+
 
 		Node currentLink = head;
 		Node previousLink = head;
@@ -249,20 +251,17 @@ class LinkedList{
 	
 
 	public Node removeByName(String name){
-
-		Node currentLink = head;
-		Node previousLink = head;
+		Node currentNode = head;
+		Node previousNode = head;
 
 		// Keep searching as long as a match isn't made
 
-		while(currentLink.name != name){
-
+		while(currentNode.name != name){
 			// Check if at the last Link in the LinkedList
 
-			if(currentLink.next == null){
+			if(currentNode.next == null){
 
 				// Name not found so leave the method
-
 				return null; 
 
 			} else {
@@ -270,15 +269,15 @@ class LinkedList{
 				// We checked here so let's look in the
 				// next Link on the list
 
-				previousLink = currentLink; 
+				previousNode = currentNode; 
 
-				currentLink = currentLink.next;
+				currentNode = currentNode.next;
 
 			}
 
 		}
 
-		if(currentLink == head){
+		if(currentNode == head){
 
 			// If you are here that means there was a match
 			// in the reference stored in head in the
@@ -288,21 +287,20 @@ class LinkedList{
 
 		} else {
 
-			// If you are here there was a match in a Link other 
 			// than the head. Assign the value of next for
-			// the Link you want to delete to the Link that's 
+			// the node you want to delete to the node that's 
 			// next previously pointed to the reference to remove
 
-			System.out.println("FOUND A MATCH");
-			System.out.println("currentLink: " + currentLink);
+			System.out.println("Name found:");
+			System.out.println("currentNode: " + currentNode);
 			System.out.println("head: " + head);
-			previousLink.next = currentLink.next; 
+			previousNode.next = currentNode.next; 
 
-			//			previousLink.setNext(currentLink.next);  // If use getter and setter
+			//			previousNode.setNext(currentNode.next);  // If use getter and setter
 
 		}
 
-		return currentLink;
+		return currentNode;
 
 	}
 
@@ -315,18 +313,67 @@ public class SinglyLinkedListExplained {
 	public static void main(String[] args) {
 
 
+		Node n1 = new Node(1, "n1");
+		Node n2 = new Node(2, "n2");
+		Node n3 = new Node(3, "n3");
+		Node n4 = new Node(4, "n4");
+		Node n5 = new Node(5, "n5");
+		Node n6 = new Node(6, "n6");
+		
+		n1.displayANode();
+		n2.displayANode();
+		n3.displayANode();
+		n4.displayANode();
+		n5.displayANode();
+		n6.displayANode();
+		
+		System.out.println("n1.next :" + n1.next) ;
+		System.out.println("n2.next :" + n2.next) ;
+		System.out.println("n3.next :" + n3.next) ;
+		System.out.println("n4.next :" + n4.next) ;
+		System.out.println("n5.next :" + n5.next) ;
+		System.out.println("n6.next :" + n6.next) ;
+		
+		System.out.println("\n= ==  After liking the nodes = = = =  = \n" ) ;
+		
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+		n5.next = n6;
+		n6.next = null;
+		
+		System.out.println("n1.next :" + n1.next) ;
+		System.out.println("n2.next :" + n2.next) ;
+		System.out.println("n3.next :" + n3.next) ;
+		System.out.println("n4.next :" + n4.next) ;
+		System.out.println("n5.next :" + n5.next) ;
+		System.out.println("n6.next :" + n6.next) ;
+		
+
+		n1.displayANode();
+		n2.displayANode();
+		n3.displayANode();
+		n4.displayANode();
+		n5.displayANode();
+		n6.displayANode();
+		
+		System.out.println("===========================");
+		
+		
 		LinkedList theLinkedList = new LinkedList();
 
 		// Insert Link and add a reference to the name Link added just prior
 		// to the field next
+		theLinkedList.prepend(0, "O");
 
-		theLinkedList.prepend(1, "A");
+		theLinkedList.append(1, "A");
 		theLinkedList.prepend(2, "B");
-		theLinkedList.prepend(3, "C");
+		theLinkedList.append(3, "C");
 		theLinkedList.prepend(4, "D");
-		theLinkedList.prepend(5, "E");
+		theLinkedList.append(5, "E");
 
-		theLinkedList.displayNodes();
+		theLinkedList.displayAllNodes();
 
 		System.out.println("Value of first in LinkedList " + theLinkedList.head + "\n");
 
@@ -334,7 +381,7 @@ public class SinglyLinkedListExplained {
 
 		theLinkedList.removeFirst();
 
-		theLinkedList.displayNodes();
+		theLinkedList.displayAllNodes();
 
 		System.out.println(theLinkedList.findByName("C").name + " Was Found");
 
@@ -342,7 +389,8 @@ public class SinglyLinkedListExplained {
 		theLinkedList.removeById(2);
 		System.out.println("\nB Removed\n");
 
-		theLinkedList.displayNodes();
+		theLinkedList.displayAllNodes();
+
 
 	}
 
