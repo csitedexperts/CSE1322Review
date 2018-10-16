@@ -1,4 +1,4 @@
-package linked_lists;
+package builtin_Linkedlist;
 import java.util.*;
 
 public class UsingBuiltinLinkedListEx1 {
