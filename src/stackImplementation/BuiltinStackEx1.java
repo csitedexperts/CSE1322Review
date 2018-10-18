@@ -1,12 +1,12 @@
 
-package stack_queue;
+package stackImplementation;
 // Java code for stack implementation 
 
 //https://www.geeksforgeeks.org/stack-class-in-java/
 
 import java.util.Stack; 
   
-public class StackImpl 
+public class BuiltinStackEx1 
 {    
     // Pushing element on the top of the stack 
     static void stack_push(Stack<Integer> stack) 

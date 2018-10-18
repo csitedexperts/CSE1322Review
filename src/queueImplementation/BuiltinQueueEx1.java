@@ -1,12 +1,12 @@
 // https://www.geeksforgeeks.org/?p=5009
 
-package stack_queue;
+package queueImplementation;
 // Java program to implement Queue using  
 // two stacks with costly enQueue()  
 import java.util.*; 
 
-class Queue  
-{  
+public class BuiltinQueueEx1 {
+	
 	static Stack<Integer> s1 = new Stack<Integer>();  
 	static Stack<Integer> s2 = new Stack<Integer>();  
 
@@ -45,12 +45,13 @@ class Queue
 		s1.pop();  
 		return x;  
 	}  
-}  
 
-public class QueueImpl {  
+
+
+
 	public static void main(String[] args)  
 	{  
-		Queue q = new Queue();  
+		BuiltinQueueEx1 q = new BuiltinQueueEx1();  
 		q.enQueue(1);  
 		q.enQueue(2);  
 		q.enQueue(3);  
@@ -59,6 +60,8 @@ public class QueueImpl {
 		System.out.println(q.deQueue()); 
 		System.out.println(q.deQueue()); 
 	}  
+
+
 }  
 
 // This code is contributed by Prerna Saini 
