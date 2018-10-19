@@ -3,6 +3,7 @@ package linkedLists;
 class Node {
 	int id;
 	String name;
+	
 	Node next; 
 
 	// Reference to next link made in the LinkList
@@ -248,7 +249,7 @@ class LinkedList{
 		return currentLink;
 
 	}
-	
+
 
 	public Node removeByName(String name){
 		Node currentNode = head;
@@ -319,37 +320,6 @@ public class SinglyLinkedListExplained {
 		Node n4 = new Node(4, "n4");
 		Node n5 = new Node(5, "n5");
 		Node n6 = new Node(6, "n6");
-		
-		n1.displayANode();
-		n2.displayANode();
-		n3.displayANode();
-		n4.displayANode();
-		n5.displayANode();
-		n6.displayANode();
-		
-		System.out.println("n1.next :" + n1.next) ;
-		System.out.println("n2.next :" + n2.next) ;
-		System.out.println("n3.next :" + n3.next) ;
-		System.out.println("n4.next :" + n4.next) ;
-		System.out.println("n5.next :" + n5.next) ;
-		System.out.println("n6.next :" + n6.next) ;
-		
-		System.out.println("\n= ==  After liking the nodes = = = =  = \n" ) ;
-		
-		n1.next = n2;
-		n2.next = n3;
-		n3.next = n4;
-		n4.next = n5;
-		n5.next = n6;
-		n6.next = null;
-		
-		System.out.println("n1.next :" + n1.next) ;
-		System.out.println("n2.next :" + n2.next) ;
-		System.out.println("n3.next :" + n3.next) ;
-		System.out.println("n4.next :" + n4.next) ;
-		System.out.println("n5.next :" + n5.next) ;
-		System.out.println("n6.next :" + n6.next) ;
-		
 
 		n1.displayANode();
 		n2.displayANode();
@@ -357,10 +327,48 @@ public class SinglyLinkedListExplained {
 		n4.displayANode();
 		n5.displayANode();
 		n6.displayANode();
+
+		System.out.println("n1.next :" + n1.next) ;
+		System.out.println("n2.next :" + n2.next) ;
+		System.out.println("n3.next :" + n3.next) ;
+		System.out.println("n4.next :" + n4.next) ;
+		System.out.println("n5.next :" + n5.next) ;
+		System.out.println("n6.next :" + n6.next) ;
+
+		System.out.println("\n= ==  After liking the nodes = = = =  = \n" ) ;
+
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+		n5.next = n6;
+		n6.next = null;
+
+		System.out.println("n1.next :" + n1.next) ;
+		System.out.println("n2.next :" + n2.next) ;
+		System.out.println("n3.next :" + n3.next) ;
+		System.out.println("n4.next :" + n4.next) ;
+		System.out.println("n5.next :" + n5.next) ;
+		System.out.println("n6.next :" + n6.next) ;
+
+
+		System.out.println("++++++++++++++++++++++++++");
+		n1.next.displayANode();
 		
+		n2.displayANode();
+		n3.displayANode();
+		n4.displayANode();
+		n5.displayANode();
+		n6.displayANode();
+
+		System.out.println("++++++++++++++++++++++++++");
+
+		
+
+
 		System.out.println("===========================");
-		
-		
+
+
 		LinkedList theLinkedList = new LinkedList();
 
 		// Insert Link and add a reference to the name Link added just prior
@@ -372,6 +380,7 @@ public class SinglyLinkedListExplained {
 		theLinkedList.append(3, "C");
 		theLinkedList.prepend(4, "D");
 		theLinkedList.append(5, "E");
+
 
 		theLinkedList.displayAllNodes();
 
@@ -385,7 +394,7 @@ public class SinglyLinkedListExplained {
 
 		System.out.println(theLinkedList.findByName("C").name + " Was Found");
 
-//		theLinkedList.removeByName("B");
+		//		theLinkedList.removeByName("B");
 		theLinkedList.removeById(2);
 		System.out.println("\nB Removed\n");
 

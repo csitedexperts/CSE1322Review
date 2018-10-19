@@ -40,16 +40,21 @@ class Stack {
 
 	public void push(int id, String name) {
 		Node node = new Node(id, name);
-		node.next = top;
-		top = node;
+
+		if (top == null) {
+			top = node;
+		}
+		else {
+			node.next = top;
+			top = node;
+		}	
 	}
 
 	public void pop() {
 		int id = top.id;
 		String name = top.name;
-		top = top.next;
 		System.out.println("Poped the node with Id: " + id + " and Name:" + name );
-
+		top = top.next;
 	}
 
 	public void displayAllNodes(){
