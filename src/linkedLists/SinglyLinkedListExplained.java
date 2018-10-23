@@ -3,14 +3,10 @@ package linkedLists;
 class Node {
 	int id;
 	String name;
-	
 	Node next; 
-
 	// Reference to next link made in the LinkList
 	// Holds the reference to the Link that was created before it
 	// Set to null until it is connected to other links
-
-
 	public Node(int id, String name){
 		this.id = id;
 		this.name = name;
@@ -381,7 +377,6 @@ public class SinglyLinkedListExplained {
 		theLinkedList.prepend(4, "D");
 		theLinkedList.append(5, "E");
 
-
 		theLinkedList.displayAllNodes();
 
 		System.out.println("Value of first in LinkedList " + theLinkedList.head + "\n");
@@ -399,7 +394,6 @@ public class SinglyLinkedListExplained {
 		System.out.println("\nB Removed\n");
 
 		theLinkedList.displayAllNodes();
-
 
 	}
 

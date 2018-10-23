@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 // Another at: https://algs4.cs.princeton.edu/13stacks/DoublyLinkedList.java.html
 //Another at:  https://www.sanfoundry.com/java-program-implement-doubly-linked-list/
 
-class DNode {
+ class DNode {
 	int id;
 	String name;
 	DNode next;
@@ -22,6 +22,7 @@ class DNode {
 		System.out.println("id: " + id + " name:" + name );
 	}
 
+	@Override
 	public String toString(){   // Required
 		return name;
 	}

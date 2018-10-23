@@ -49,11 +49,13 @@ class Queue {
 
 		if (tail == null) {
 			top = node;
+			tail = node;
 		}
 		else {
 			tail.next = node;
+			tail = node;
 		}
-		tail = node;
+		
 	}
 
 	public void deQueue() {
