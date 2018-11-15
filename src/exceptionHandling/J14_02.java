@@ -10,7 +10,9 @@ public class J14_02 {
 			System.out.print("Enter a character: ");
 			ch= (char)System.in.read();
 		}
-		catch(Exception e){   }  // An Empty Exception Handler 
+		catch(Exception e){
+			
+		}  // An Empty Exception Handler 
 		System.out.println("You have entered: " +ch);
 	}
 } 

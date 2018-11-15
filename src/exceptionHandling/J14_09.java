@@ -24,10 +24,10 @@ public class J14_09 {
 			System.out.println("Value of d1 is undetermined");
 			System.out.println("\t(Division by zero)");  //ERROR Message
 		} // End of outer catch block
-
 		finally{
 			d = z/(y-x);  // OK and displayed
 			System.out.println("Now d = "+d);
 		}
+		System.out.println("Now d = "+d);
 	}
 }

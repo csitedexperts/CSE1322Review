@@ -7,9 +7,7 @@ public class Substring_Operations {
 		String greeting = "Luke, Use the force Luke!";
 		System.out.println(greeting.substring(7, 20));		
 
-		String greetings = "Hello, World! I like OOP";
-		System.out.println(greetings.substring(7, 20));		
-
+	
 		String s = "Bonds";
 		s = s + s.length();
 		System.out.println(s);		
@@ -18,8 +16,16 @@ public class Substring_Operations {
 		a = a + a.length();
 		System.out.println(a);		
 
+		System.out.println("===============");
 		
-		String state = "Massachusetts";
+		String greetings = "Hello World! I like OOP";
+		System.out.println(greetings.substring(5, 15));		
+
+		String k = "Kennesaw";
+		k = k + k.length();
+		System.out.println(k);		
+	
+		String state = "Pennsylvenia";
 		
 		System.out.println(state.substring(2, 5));		
 
@@ -27,7 +33,7 @@ public class Substring_Operations {
 
 		System.out.println(state.substring(1));		
 
-
+/*
 		String river = "Mississippi";
 		
 		System.out.println(river.substring(2, 5));		
@@ -36,7 +42,7 @@ public class Substring_Operations {
 
 		System.out.println(river.substring(1));		
 
-
+*/
 	}
 
 
