@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Heap<E extends Comparable<E>> {
+public class HeapSort<E extends Comparable<E>> {
 
     private List<E> elements = new ArrayList<>();
 
     public static <E extends Comparable<E>> List<E> sort(Iterable<E> elements) {
-        Heap<E> heap = of(elements);
+        HeapSort<E> heap = of(elements);
 
         List<E> result = new ArrayList<>();
 
@@ -20,12 +20,12 @@ public class Heap<E extends Comparable<E>> {
         return result;
     }
 
-    public static <E extends Comparable<E>> Heap<E> of(E... elements) {
+    public static <E extends Comparable<E>> HeapSort<E> of(E... elements) {
         return of(Arrays.asList(elements));
     }
 
-    public static <E extends Comparable<E>> Heap<E> of(Iterable<E> elements) {
-        Heap<E> result = new Heap<>();
+    public static <E extends Comparable<E>> HeapSort<E> of(Iterable<E> elements) {
+        HeapSort<E> result = new HeapSort<>();
         for (E element : elements) {
             result.add(element);
         }

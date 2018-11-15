@@ -1,11 +1,16 @@
 package sortingAlgs;
+/*
+Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+Algorithm  // https://www.geeksforgeeks.org/insertion-sort/
 
+// Sort an arr[] of size n
+insertionSort(arr, n)
+Loop from i = 1 to n-1.
+……a) Pick element arr[i] and insert it into sorted sequence arr[0…i-1]
 
-/*Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
-Java  // https://www.geeksforgeeks.org/java-program-for-bubble-sort/
-// https://www.javatpoint.com/bubble-sort-in-java
- */
-// Java program for implementation of Bubble Sort
+*/
+// Java program for implementation of Insertion Sort
+
 public class InsertionSort
 {
 	public static void insertionSort(int arr[])
