@@ -1,4 +1,5 @@
 package classAndObjects;
+
 public class Student1322
 {
 	private int  Roll;	
@@ -12,6 +13,7 @@ public class Student1322
 	public float getMark() {return Mark; }
 	public void setMark(float mark) { Mark = mark; }
 
+	@Override
 	public String toString() {
 		String output = "Roll: " + getRoll() + 
 				"\tName: " + getName() +
@@ -21,6 +23,5 @@ public class Student1322
 	}
 
 
-	
 	
 }  

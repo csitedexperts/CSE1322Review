@@ -1,5 +1,6 @@
 package inheritance;
-public class Employee{
+
+public class Employee extends Object{
 	 String empName;
 	 int empId;	
 

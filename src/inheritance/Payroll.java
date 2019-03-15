@@ -29,7 +29,8 @@ public class Payroll extends Employee {
 
 	public static void main(String[] args) {
 		
-//		Payroll pr1 = new Payroll();
+		Payroll pr1 = new Payroll();
+//		pr1.
 		
 		System.out.println("-------------------------");
 		Payroll pr2 = new Payroll("John", 303, 78000f);

@@ -21,7 +21,7 @@ public class LinearSearchAlgs {
 
 	public static void main(String [] args) {
 
-		int[] myData =  { 20, 7, 5, -3, 11, 5};
+		int[] myData = new int[] { 20, 7, 5, -3, 11, 5};
 
 		FindANumber(myData, 15);
 		System.out.println("==================================");

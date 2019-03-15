@@ -1,4 +1,4 @@
-package abstraction;
+
 /* AbstractClassEx01.java */
 /* Inheriting Abstract Base class/ Abstract Member */
 
