@@ -1,4 +1,4 @@
-package abstraction;
+package abstraction_AnimalAbstractClass;
 // VehicleHierarchyEx1.java
 interface Vehicle{
 	boolean hasAnEngine= true;
