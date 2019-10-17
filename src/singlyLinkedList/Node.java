@@ -1,4 +1,5 @@
 package singlyLinkedList;
+
 public class Node {
 	int id;
 	String name;
@@ -10,7 +11,6 @@ public class Node {
 	public Node(int id, String name){
 		this.id = id;
 		this.name = name;
-		
 	}
 
 	public void displayANode(){
@@ -28,6 +28,5 @@ public class Node {
 
 	/*	public Node getNext() { return next; 	}  */
 	/*public void setNext(Node next) { this.next = next; } */
-
 
 }
