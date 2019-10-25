@@ -4,25 +4,20 @@ class Node {
 	int id;
 	String name;
 	Node next; 
-
 	public Node(int id, String name){
 		this.id = id;
 		this.name = name;
 	}
-
 	public void displayANode(){
 		System.out.println("id: " + id + " name:" + name );
 	}
-
 	@Override
 	public String toString(){   // Required
 		return name;
 	}
-
 }  // End of the Node class
 
 class Queue {
-
 	Node top;
 	Node tail;
 
@@ -44,9 +39,18 @@ class Queue {
 		}
 	}
 
+	public void bottom() {
+		if(tail == null)
+			System.out.println("There is nothing on be bottom");
+		else {
+			System.out.println("The bottom node's id is : " + tail.id);
+		}
+	}
+
+		
 	public void enQueue(int id, String name) {
 		Node node = new Node(id, name);
-
+		
 		if (tail == null) {
 			top = node;
 			tail = node;
@@ -98,6 +102,7 @@ public class QueueImplementationExplained {
 		Queue myq = new Queue();
 
 		myq.enQueue(1, "AA");
+		
 		System.out.println("myq.top = " + myq.top);
 		System.out.println("myq.tail = " + myq.tail);
 
@@ -120,15 +125,22 @@ public class QueueImplementationExplained {
 		myq.displayAllNodes();
 
 		myq.peek();
+		myq.bottom();
+		
+		myq.deQueue();
+		myq.deQueue();
+		myq.deQueue();
+		myq.deQueue();
+		myq.deQueue();
+		myq.deQueue();
+		myq.deQueue();
+		myq.deQueue();
 
-		myq.deQueue();
-		myq.deQueue();
-		myq.deQueue();
-		myq.deQueue();
-		myq.deQueue();
-		myq.deQueue();
-		myq.deQueue();
-		myq.deQueue();
+		myq.enQueue(50, "ZZ");
+
+
+		myq.peek();
+		myq.bottom();
 
 		myq.displayAllNodes();
 
