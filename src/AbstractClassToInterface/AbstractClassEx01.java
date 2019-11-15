@@ -58,7 +58,7 @@ public class AbstractClassEx01{
 		
 		
 		
-		
+		Animal aa1 = new Bird();
 		
 		
 		Human h0 = new Human();   // Human reference and Human object
