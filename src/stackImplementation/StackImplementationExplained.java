@@ -6,20 +6,18 @@ class Node {
 	int id;
 	String name;
 	Node next; 
-
-	public Node(int id, String name){
-		this.id = id;
+	public Node(int Id, String name){
+		this.id = Id;
 		this.name = name;
 	}
 
 	public void displayANode(){
 		System.out.println("id: " + id + " name:" + name );
 	}
-
+	@Override
 	public String toString(){   // Required
 		return name;
 	}
-
 }  // End of the Node class
 
 class Stack {
@@ -31,31 +29,36 @@ class Stack {
 	}
 
 	public boolean isEmpty() {
-		return(top == null);
+		return (top == null);
 	}
 
 	public void peek() {
-		if(isEmpty())
+		if(isEmpty()== true)
 			System.out.println("There is nothing to peek");
 		else {
 			System.out.println("The top node's id is : " + top.id);
+			System.out.println("The top node's name is : " + top.name);
 		}
 	}
 
 	public void push(int id, String name) {
+
 		Node node = new Node(id, name);
 
-		if (top == null) {
+		//	if (top == null) // 
+		if (isEmpty()== true)
+		{
 			top = node;
 		}
 		else {
 			node.next = top;
-			top = node;
+			top = node;		
 		}	
 	}
 
 	public void pop() {
-		if (top == null) {
+		if (top == null) // if (isEmpty()== true)
+		{
 			System.out.println("There is no node to delete" );
 			return;
 		}
@@ -98,9 +101,11 @@ public class StackImplementationExplained {
 		mys.push(3, "CC");
 		mys.push(4, "DD");
 		mys.push(5, "EE");
-
+		/*mys.pop();
+		mys.peek();
+		 */
 		mys.displayAllNodes();
-
+		/*
 		mys.pop();
 		mys.pop();
 		mys.pop();
@@ -112,9 +117,9 @@ public class StackImplementationExplained {
 		mys.pop();
 		mys.pop();
 		mys.peek();
-		
-		mys.displayAllNodes();
 
+		mys.displayAllNodes();
+		 */
 	}
 
 }

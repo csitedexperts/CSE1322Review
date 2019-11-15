@@ -12,18 +12,17 @@ class LinkedList{
 		head = null;  // null initialization
 		// Here to show the head always starts as null
 	}
-	
-// LinkedList ln = new LinkedList();
-	
+
+	// LinkedList ln = new LinkedList();
+
 	// Returns true if LinkList is empty
 
-	
-	public boolean isEmpty(){
-/*		if (head == null) return true;
-		else return false;
-*/
-		return(head == null);
 
+	public boolean isEmpty(){
+		/*		if (head == null) return true;
+		else return false;
+		 */
+		return(head == null);
 	}
 
 
@@ -54,13 +53,12 @@ class LinkedList{
 			head = new Node(id, name);
 			return; 
 		}
-		Node currentNode = head;
-		while(currentNode.next != null) {
-			currentNode = currentNode.next;
+		Node currentHead = head;
+		while(currentHead.next != null) {
+			currentHead = currentHead.next;
 		}
-		currentNode.next = new Node(id, name);
+		currentHead.next = new Node(id, name);
 	}
-
 	public void prepend(int id, String name){
 		if (head == null) { 
 			head = new Node(id, name);
@@ -73,18 +71,13 @@ class LinkedList{
 		head = newHead;
 	}
 
-	
+
 
 	public Node removeFirst(){
-
 		Node deleteLink = head;
-
 		if(!isEmpty()){
-
 			// Removes the Link from the List
-
 			head = head.next;
-
 		} else {
 
 			System.out.println("Empty LinkedList");
@@ -98,16 +91,16 @@ class LinkedList{
 
 	public Node removeById(int id){
 
-		Node currentLink = head;
-		Node previousLink = head;
+		Node currentHead = head;
+		Node previousHead = head;
 
 		// Keep searching as long as a match isn't made
 
-		while(currentLink.id != id){
+		while(currentHead.id != id){
 
 			// Check if at the last Link in the LinkedList
 
-			if(currentLink.next == null){
+			if(currentHead.next == null){
 
 				// id not found so leave the method
 
@@ -118,15 +111,15 @@ class LinkedList{
 				// We checked here so let's look in the
 				// next Link on the list
 
-				previousLink = currentLink; 
+				previousHead = currentHead; 
 
-				currentLink = currentLink.next;
+				currentHead = currentHead.next;
 
 			}
 
 		}
 
-		if(currentLink == head){
+		if(currentHead == head){
 
 			// If you are here that means there was a match
 			// in the reference stored in head in the
@@ -142,15 +135,15 @@ class LinkedList{
 			// next previously pointed to the reference to remove
 
 			System.out.println("FOUND A MATCH");
-			System.out.println("currentLink: " + currentLink);
+			System.out.println("currentLink: " + currentHead);
 			System.out.println("head: " + head);
-			previousLink.next = currentLink.next; 
+			previousHead.next = currentHead.next; 
 
 			//			previousLink.setNext(currentLink.next);  // If use getter and setter
 
 		}
 
-		return currentLink;
+		return currentHead;
 
 	}
 
@@ -210,13 +203,13 @@ class LinkedList{
 	}
 
 
-	public Node findById(String id){
+	public Node findById(int id){
 
 		Node theNode = head;
 
 		if(!isEmpty()){
 
-			while(theNode.name != id){
+			while(theNode.id != id){
 
 				// Checks if at the end of the LinkedList
 
@@ -293,7 +286,6 @@ public class SinglyLinkedListExplained {
 
 	public static void main(String[] args) {
 
-/*
 		Node n1 = new Node(1, "n1");
 		Node n2 = new Node(2, "n2");
 		Node n3 = new Node(3, "n3");
@@ -307,7 +299,7 @@ public class SinglyLinkedListExplained {
 		n4.displayANode();
 		n5.displayANode();
 		n6.displayANode();
-		
+
 		System.out.println("n1.next :" + n1.next) ;
 		System.out.println("n2.next :" + n2.next) ;
 		System.out.println("n3.next :" + n3.next) ;
@@ -315,6 +307,7 @@ public class SinglyLinkedListExplained {
 		System.out.println("n5.next :" + n5.next) ;
 		System.out.println("n6.next :" + n6.next) ;
 
+		
 		System.out.println("\n= ==  After liking the nodes = = = =  = \n" ) ;
 
 		n1.next = n2;
@@ -331,10 +324,10 @@ public class SinglyLinkedListExplained {
 		System.out.println("n5.next :" + n5.next) ;
 		System.out.println("n6.next :" + n6.next) ;
 
-
+		
 		System.out.println("++++++++++++++++++++++++++");
 		n1.next.displayANode();
-		
+
 		n2.displayANode();
 		n3.displayANode();
 		n4.displayANode();
@@ -342,22 +335,21 @@ public class SinglyLinkedListExplained {
 		n6.displayANode();
 
 		System.out.println("++++++++++++++++++++++++++");
-*/
-		
+
 		System.out.println("===========================");
 
 
 		LinkedList theLinkedList = new LinkedList();
-		
+
 		theLinkedList.append(101, "Michael");
 		theLinkedList.prepend(102, "Sasah");
 		theLinkedList.append(103, "Braxton");
 		theLinkedList.append(104, "Lee");
 		theLinkedList.prepend(105, "Mokter");
-//  105 > 102 > 101 > 103  > 104 
+		//  105 > 102 > 101 > 103  > 104 
 		theLinkedList.displayAllNodes();
 
-/*		// Insert Link and add a reference to the name Link added just prior
+		/*		// Insert Link and add a reference to the name Link added just prior
 		// to the field next
 		theLinkedList.prepend(0, "O");
 

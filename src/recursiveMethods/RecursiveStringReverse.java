@@ -20,10 +20,10 @@ public class RecursiveStringReverse {
 
 	static String reverse(String str) {
 		if (str == null  || str.length() <=1)
-			
 			return str;
 		else{
-			return (reverse(str.substring(1)) +  str.charAt(0));  // recursion makes here
+			return (reverse(str.substring(1)) +
+					str.charAt(0));  // recursion makes here
 		}
 	}
 }  

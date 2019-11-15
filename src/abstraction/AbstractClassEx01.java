@@ -54,7 +54,7 @@ public class AbstractClassEx01{
 		a = new Human();
 		a.move();
 		
-		Bird a1 = new Object();
+//		Bird a1 = new Object();
 		Object o1 = new Bird();
 		Object o2 = new Human();
 		//o1.

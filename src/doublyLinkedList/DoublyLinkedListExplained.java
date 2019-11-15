@@ -8,7 +8,6 @@ import java.util.NoSuchElementException;
  
 
 class DoublyLinkedList {
-
 	private Node head;
 	private Node tail;
 	private int size;
@@ -34,7 +33,7 @@ class DoublyLinkedList {
 		Node tmp = new Node(id, name, head, null);
 		if(head != null ) {head.prev = tmp;}
 		head = tmp;
-		if(tail == null) { tail = tmp;}
+		if(head == null) { tail = tmp;}
 		size++;
 		System.out.println("prepending id: "+ id + " name: " + name);
 	}

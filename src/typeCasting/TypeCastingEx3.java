@@ -5,7 +5,7 @@ public class TypeCastingEx3{
 	// Upcasting and downcasting with Number, Integer, Float etc.
 	 
 	public static void main(String[] args) {
-		double a = (int) (50.0 / 10.0);
+		float a =  55 / 10;
 		System.out.println("a = " + a);
 		
 		int b = 28/(2%4);
@@ -14,6 +14,7 @@ public class TypeCastingEx3{
 		Number n, n1;
 		Integer i = 5;
 		Double d = 2.5;
+		
 	// Upcasting, putting Double and Integer to Number. No issue, Automatic.
 	n = i;
 	n1 = d;
