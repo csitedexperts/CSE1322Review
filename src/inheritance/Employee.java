@@ -1,5 +1,5 @@
 package inheritance;
-
+/*
 public class Employee extends Object{
 	 String empName;
 	 int empId;	
@@ -19,3 +19,6 @@ public class Employee extends Object{
 	}
 
 }
+
+*/
+

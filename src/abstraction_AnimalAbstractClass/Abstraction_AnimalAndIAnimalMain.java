@@ -14,7 +14,6 @@ interface   IAnimal {
 
 }
 
-
 class Cat extends Animal{
 
 	@Override
@@ -60,7 +59,6 @@ public class Abstraction_AnimalAndIAnimalMain{
 		System.out.println("======================");
 		IAnimal d = new Dog();
 		d.animalColor();
-
 	}
 }
 
