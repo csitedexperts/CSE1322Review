@@ -203,33 +203,46 @@ class LinkedList{
 	}
 
 
+	public void searchById(int id){
+		Node node = head;
+		boolean isFound = false;
+		if(isEmpty()){
+			System.out.println("Empty LinkedList");
+		}
+		else{
+			while(node != null){		
+				if(node.id == id){
+					// Found a matching Link in the LinkedList
+					isFound = true;
+				} 
+				node = node.next; // Go to the next node
+			}
+		}
+
+		if(isFound) {
+			System.out.println("Found the node with id = " + id);
+		
+		}
+		else
+			System.out.println("No node found with id = " + id);
+		
+	}
+
+
 	public Node findById(int id){
-
 		Node theNode = head;
-
 		if(!isEmpty()){
-
 			while(theNode.id != id){
-
 				// Checks if at the end of the LinkedList
-
 				if(theNode.next == null){
-
 					// Got to the end of the Links in LinkedList
 					// without finding a match
-
 					return null;
-
 				} else {
-
 					// Found a matching Link in the LinkedList
-
 					theNode = theNode.next;
-
 				}
-
 			}
-
 		} else {
 
 			System.out.println("Empty LinkedList");
@@ -239,6 +252,8 @@ class LinkedList{
 		return theNode;
 
 	}
+
+
 
 
 	public Node findByName(String name){
@@ -307,7 +322,7 @@ public class SinglyLinkedListExplained {
 		System.out.println("n5.next :" + n5.next) ;
 		System.out.println("n6.next :" + n6.next) ;
 
-		
+
 		System.out.println("\n= ==  After liking the nodes = = = =  = \n" ) ;
 
 		n1.next = n2;
@@ -324,7 +339,7 @@ public class SinglyLinkedListExplained {
 		System.out.println("n5.next :" + n5.next) ;
 		System.out.println("n6.next :" + n6.next) ;
 
-		
+
 		System.out.println("++++++++++++++++++++++++++");
 		n1.next.displayANode();
 
@@ -348,6 +363,11 @@ public class SinglyLinkedListExplained {
 		theLinkedList.prepend(105, "Mokter");
 		//  105 > 102 > 101 > 103  > 104 
 		theLinkedList.displayAllNodes();
+
+		System.out.println("Search By id");
+
+		theLinkedList.searchById(103);
+
 
 		/*		// Insert Link and add a reference to the name Link added just prior
 		// to the field next

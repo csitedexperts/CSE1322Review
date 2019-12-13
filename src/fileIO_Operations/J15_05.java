@@ -15,7 +15,7 @@ import java.io.*;
    FileOutputStream fos = new FileOutputStream("./test.txt", FMode);
 
    char c = (char)System.in.read();  // Reading  a Character
-   while(c != '\n')   // While not pressed ENTER
+   while(c != 'Q')   // While not pressed ENTER
     {
     fos.write(c);  // Writting into file
     c = (char)System.in.read();// Reading  a Character

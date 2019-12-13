@@ -13,7 +13,7 @@ public class ImplementBST{
 		             /  \ 
 		           20    60 
 		          /  \   /  \ 
-		        10   30  50  70 
+		        10   30 50  70 
 
 		 */
 
@@ -116,6 +116,7 @@ class BST {
 
 	// A utility function to do inorder traversal of BST 
 	void traverseInOrder(Node root) { 
+		
 		if (root != null) { 
 			traverseInOrder(root.left); 
 			System.out.print(root.data + " "); 

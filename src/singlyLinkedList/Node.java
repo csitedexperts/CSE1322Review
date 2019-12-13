@@ -12,18 +12,16 @@ public class Node {
 		this.id = id;
 		this.name = name;
 	}
-
 	public void displayANode(){
 		System.out.println("id: " + id + " name:" + name );
+		
 	}
-
 	@Override
 	public String toString(){   // Required
 //		return "" + id ;
 //		return name;
 //		return  name + "  " + id ;
-		return "" + id + "  " + name;
-		
+		return "" + id + "  " + name;	
 	}
 
 	/*	public Node getNext() { return next; 	}  */

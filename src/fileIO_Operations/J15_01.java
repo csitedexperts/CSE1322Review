@@ -4,12 +4,12 @@ package fileIO_Operations;
 import java.io.*; // Required for FileWriter Class
 public class J15_01{  
 	
- public static void main(String[] args) throws IOException
+ public static void main(String[] args) throws IOException 
    {  
-   FileWriter fr = new FileWriter("./Mokter.txt");
+   FileWriter fr = new FileWriter("Mokter.doc");
    
    PrintWriter pr = new PrintWriter(fr);
-   
+   System.out.println("Test.....");
    fr.close();
   }
 }
