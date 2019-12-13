@@ -8,6 +8,7 @@ public class J14_01
 		int x, y, z, d;
 		x = 5; y=10; z=15;
 		d = z/(y-2*x);  // Exception Makes Here (Division by zero)
+		
 		System.out.println("hshfhas fhasf asfj ");
 		System.out.println("d = "+d);
 	}

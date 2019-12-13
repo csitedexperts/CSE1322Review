@@ -29,7 +29,6 @@ abstract class Animal {
 	}
 
 
-
 class Cat extends Animal{
 
 	public Cat(String name, int id) {
@@ -98,7 +97,6 @@ public class Abstraction_AnimalAndIAnimalMain{
 		System.out.println("======================");
 		IAnimal d = new Dog("Dog", 102);
 		d.animalColor();
-
 	}
 
 }

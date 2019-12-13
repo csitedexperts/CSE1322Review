@@ -1,8 +1,11 @@
 package recursiveMethods;
 /*Example of Recursive Method */
 
+import java.util.Scanner;
+
 public class RecursiveStringReverse {
 	public static void main(String args[]) {
+
 		String s = "hello"; 
 		
 		System.out.println("Using the reverse(): Reverse of the string '"+ 

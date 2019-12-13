@@ -3,9 +3,13 @@ package exceptionHandling;
 /* Using try/catch Statements while using read() Method */
 import  java.io.* ; 
 public class J14_02 {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws IOException {
+		
 		DataInputStream in = new DataInputStream(System.in);
 		char ch=0;
+		System.out.print("Enter a character: ");
+		ch= (char)System.in.read();
+		/*
 		try {
 			System.out.print("Enter a character: ");
 			ch= (char)System.in.read();
@@ -13,6 +17,8 @@ public class J14_02 {
 		catch(Exception e){
 			
 		}  // An Empty Exception Handler 
+		
+		*/
 		System.out.println("You have entered: " +ch);
 	}
 } 

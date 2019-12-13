@@ -1,14 +1,18 @@
-package AbstractClassToInterface;
-
+package abstraction;
 /* AbstractClassEx01.java */
 /* Inheriting Abstract Base class/ Abstract Member */
 
-abstract interface Animal {
-	abstract  public void move();	
-	public void nonAbstractMethod();
+abstract class Animal {
+	abstract  public void move();
+	
+	public void nonAbstractMethod()
+	{
+		System.out.println("Mammal::nonAbstractMethod()");
+		// ...
+	}
 }
 
-class Human implements Animal{
+class Human extends Animal{
 
 	public void move(){
 		System.out.println("Human can't fly but can walk and run");
@@ -25,7 +29,7 @@ class Human implements Animal{
 	}
 }
 
-class Bird implements Animal{
+class Bird extends Animal{
 
 	public void move(){
 		System.out.println("Birds can walk, fly, and run");
@@ -50,6 +54,10 @@ public class AbstractClassEx01{
 		a = new Human();
 		a.move();
 		
+//		Bird a1 = new Object();
+		Object o1 = new Bird();
+		Object o2 = new Human();
+		//o1.
 		
 		System.out.println("---------------------");
 		
@@ -58,7 +66,7 @@ public class AbstractClassEx01{
 		
 		
 		
-		Animal aa1 = new Bird();
+		
 		
 		
 		Human h0 = new Human();   // Human reference and Human object
