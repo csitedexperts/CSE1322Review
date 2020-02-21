@@ -2,7 +2,7 @@ package fileIO_Operations;
 /* 	J15_10.java	  */
 /* A Sample File Management Program */
 import java.io.*;
-public class J15_10
+public class CheckingFilePropertiesWithFileClassEx2
 {
 	public static void main(String args[]) throws IOException
 	{
@@ -12,7 +12,7 @@ public class J15_10
 		System.out.print("Enter a  file name : ");
 		S = BR.readLine();
 		File f = new File(S);
-		if(f.exists()==true)
+		if(f.exists())  // f.exists()==true
 		{
 			System.out.println("The file : "  + f.getName() +" exists.");
 			System.out.println("Absoulate Path of the File is : " + f.getAbsolutePath());

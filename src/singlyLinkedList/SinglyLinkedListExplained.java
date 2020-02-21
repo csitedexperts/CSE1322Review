@@ -228,6 +228,33 @@ class LinkedList{
 		
 	}
 
+	
+	public int searchById2(int id){
+		
+		int isFound = -1;
+		if(isEmpty()){
+			System.out.println("Empty LinkedList");
+			return isFound;
+		}
+		Node node = head;
+			while(node != null){		
+				if(node.id == id){
+					// Found a matching Link in the LinkedList
+					isFound = 0;
+					return isFound;
+				}
+				else {
+				node = node.next; // Go to the next node
+				}
+			}
+			//if (isFound != -1){
+				return isFound;
+			//}
+		}
+
+
+
+	
 
 	public Node findById(int id){
 		Node theNode = head;
@@ -364,10 +391,13 @@ public class SinglyLinkedListExplained {
 		//  105 > 102 > 101 > 103  > 104 
 		theLinkedList.displayAllNodes();
 
-		System.out.println("Search By id");
+		System.out.println("searchById()");
 
 		theLinkedList.searchById(103);
-
+		System.out.println("searchById2(): " + theLinkedList.searchById2(103));
+		System.out.println("searchById2(): " + theLinkedList.searchById2(1003));
+			
+		
 
 		/*		// Insert Link and add a reference to the name Link added just prior
 		// to the field next

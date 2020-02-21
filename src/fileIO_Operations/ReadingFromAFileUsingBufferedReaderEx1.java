@@ -2,7 +2,7 @@ package fileIO_Operations;
 /* J15_06.java   */
 /* Reading Data From a Data File  */
 import java.io.*;
- public class J15_06
+ public class ReadingFromAFileUsingBufferedReaderEx1
 {  
  public static void main(String[] args) throws IOException
    {  

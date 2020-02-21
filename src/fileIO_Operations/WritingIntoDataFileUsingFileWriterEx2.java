@@ -1,0 +1,21 @@
+package fileIO_Operations;
+/* J15_02.java   */
+/* Opening a New Data File  */
+import java.io.*; // Required for FileWriter Class
+public class WritingIntoDataFileUsingFileWriterEx2{  
+	public static void main(String[] args){  
+		try{  
+			FileWriter fw = new FileWriter("./test.txt");
+			fw.close();
+		}
+		catch(IOException e)
+		{  
+			System.out.print("Error: " + e);
+			System.exit(1);  // For Normal Termination
+		}
+		finally {
+			System.out.print("File closed");
+			
+		}
+	}
+}

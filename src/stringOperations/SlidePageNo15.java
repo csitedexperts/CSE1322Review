@@ -3,7 +3,7 @@ package stringOperations;
 public class SlidePageNo15 {
 	public static void main(String[] args) {
 		String oop = "I like Object-Oriented Programming";
-		System.out.println(oop.substring(7, 14));
+		System.out.println(oop.substring(0, 14));
 		
 		String s ="Agent";
 		s = s + s.length(); 

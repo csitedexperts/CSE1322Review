@@ -2,7 +2,7 @@ package fileIO_Operations;
 public class WriteDataWithAutoClose {
 	public static void main(String[] args) throws Exception {
 		
-		java.io.File file = new java.io.File("./Mokterr.txt");
+		java.io.File file = new java.io.File("./Test.txt");
 		
 		if (file.exists()) {
 			System.out.println("File already exists");

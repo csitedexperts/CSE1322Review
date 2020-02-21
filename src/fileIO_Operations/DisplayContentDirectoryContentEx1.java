@@ -4,7 +4,7 @@ package fileIO_Operations;
 import java.io.*;
 import java.awt.*;
 
-public class J15_11 extends Frame
+public class DisplayContentDirectoryContentEx1 extends Frame
 {
 	TextArea t;
 
@@ -21,13 +21,13 @@ public class J15_11 extends Frame
 			System.out.println("The directory "+ path + "does not exist." );
 			System.exit(0);
 		}
-		J15_11 Obj = new J15_11(f);
+		DisplayContentDirectoryContentEx1 Obj = new DisplayContentDirectoryContentEx1(f);
 		Obj.setVisible(true);
 	}
 
-	J15_11(File f)
+	DisplayContentDirectoryContentEx1(File f)
 	{
-		super("File and Directory of the Current Directory");
+		super("Content of the Current Directory");
 		setSize(350,250);
 		t = new TextArea();
 		add(BorderLayout.CENTER, t);

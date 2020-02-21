@@ -2,7 +2,7 @@ package fileIO_Operations;
 /* J15_03.java   */
 /* Writing into a Data File  */
 import java.io.*;
-public class J15_03{  
+public class WritingIntoDataFileUsingBufferReaderEx1{  
 	public static void main(String[] args) throws IOException {  
 		FileWriter fws = new FileWriter("./test.txt");
 		System.out.println("A file named test.txt is opened for you: ");
