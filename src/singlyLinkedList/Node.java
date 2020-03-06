@@ -3,7 +3,8 @@ package singlyLinkedList;
 public class Node {
 	int id;
 	String name;
-	Node next; 
+	
+	public Node next; 
 	// Reference to next link made in the LinkList
 	// Holds the reference to the Link that was created before it
 	// Set to null until it is connected to other links
@@ -16,6 +17,7 @@ public class Node {
 		System.out.println("id: " + id + " name:" + name );
 		
 	}
+	
 	@Override
 	public String toString(){   // Required
 //		return "" + id ;

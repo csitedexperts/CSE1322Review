@@ -19,8 +19,11 @@ class LinkedList{
 
 
 	public boolean isEmpty(){
-		/*		if (head == null) return true;
-		else return false;
+		/*		
+		 if (head == null) 
+		 	return true;
+		else 
+			return false;
 		 */
 		return(head == null);
 	}
@@ -59,6 +62,7 @@ class LinkedList{
 		}
 		currentHead.next = new Node(id, name);
 	}
+	
 	public void prepend(int id, String name){
 		if (head == null) { 
 			head = new Node(id, name);
@@ -66,6 +70,7 @@ class LinkedList{
 		}
 		Node newHead = new Node(id, name);
 		// Connects the head field to the newHead 
+		
 		newHead.next = head;
 		//		newHead.setNext(head);  // If you use setter
 		head = newHead;
@@ -75,22 +80,38 @@ class LinkedList{
 
 	public Node removeFirst(){
 		Node deleteLink = head;
-		if(!isEmpty()){
+		if(isEmpty()){
 			// Removes the Link from the List
-			head = head.next;
+			System.out.println("Empty LinkedList");
 		} else {
 
-			System.out.println("Empty LinkedList");
+			head = head.next;
 
 		}
-
 		return deleteLink;
-
 	}
 
 
-	public Node removeById(int id){
 
+	public Node removeSecondNode(){
+		Node deleteLink = head;
+		if(isEmpty()){
+			// Removes the Link from the List
+			System.out.println("Empty LinkedList");
+		}
+		else if(head.next == null){
+			// Removes the Link from the List
+			System.out.println("There is only one node");
+		}
+		else {
+
+			head = head.next.next;
+
+		}
+		return deleteLink;
+	}
+
+	public Node removeById(int id){
 		Node currentHead = head;
 		Node previousHead = head;
 
@@ -329,6 +350,7 @@ public class SinglyLinkedListExplained {
 	public static void main(String[] args) {
 
 		Node n1 = new Node(1, "n1");
+		
 		Node n2 = new Node(2, "n2");
 		Node n3 = new Node(3, "n3");
 		Node n4 = new Node(4, "n4");
@@ -341,8 +363,11 @@ public class SinglyLinkedListExplained {
 		n4.displayANode();
 		n5.displayANode();
 		n6.displayANode();
-
+		
+		System.out.println("== = = = =  = = = = = = = = = = ") ;
+		
 		System.out.println("n1.next :" + n1.next) ;
+		
 		System.out.println("n2.next :" + n2.next) ;
 		System.out.println("n3.next :" + n3.next) ;
 		System.out.println("n4.next :" + n4.next) ;
@@ -380,14 +405,23 @@ public class SinglyLinkedListExplained {
 
 		System.out.println("===========================");
 
+		System.out.println("===========================");
+
 
 		LinkedList theLinkedList = new LinkedList();
 
 		theLinkedList.append(101, "Michael");
 		theLinkedList.prepend(102, "Sasah");
+		
 		theLinkedList.append(103, "Braxton");
 		theLinkedList.append(104, "Lee");
 		theLinkedList.prepend(105, "Mokter");
+		
+		
+		// Mokter -> Sarah -> Michael -> Braxton -> Lee
+		
+		
+		
 		//  105 > 102 > 101 > 103  > 104 
 		theLinkedList.displayAllNodes();
 
