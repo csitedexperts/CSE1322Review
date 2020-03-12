@@ -3,6 +3,7 @@ public class Node {
 	int id;
 	String name;
 	Node next;
+	
 	Node prev;
 
 	public Node(int id, String name, Node next, Node prev) {

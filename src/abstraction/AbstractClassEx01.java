@@ -61,14 +61,7 @@ public class AbstractClassEx01{
 		
 		System.out.println("---------------------");
 		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		Human h0 = new Human();   // Human reference and Human object
 		// Here h0 is a Human object that references to a Human type
 
@@ -83,7 +76,8 @@ public class AbstractClassEx01{
 
 		Animal b2 = new Bird(); // Mammals reference and Birds object
 		// Here h2 is a Bird object that is a reference to a Mammal type
-
+		//Bird b3 = new Animal(); // Mammals reference and Birds object
+		
 		b1.move();
 		b1.fly();
 		b1.nonAbstractMethod();
