@@ -5,7 +5,14 @@ import java.lang.Exception;   // Optional Statement
 
 class MyException extends Exception{
 	MyException(String Msg) // Constructor Defined
-	{ 	super(Msg); }
+	{ 	
+		super(Msg); 
+	}
+	public String myMessage() {
+		return "MyException::MyMessage() executed";
+
+	}
+
 }
 public class J14_12 {
 	public static void main(String args[]){
@@ -13,15 +20,17 @@ public class J14_12 {
 		float z;
 		try {
 			z = (float)x/(float)y ;
+			System.out.println("z = " + z);
 			if(z<0.001)
-				throw new MyException("Hey CSITEd Experts!! The result is too small");
+				throw new MyException("The result is too small");
 		} // End of Try Block
 		catch (MyException  exObj){ 
 			// Catching user-defined Exception
 			System.out.println("Caught user-defined Exception");
 			System.out.println(exObj.getMessage() );
+			System.out.println(exObj.myMessage() );
 		}  // End of Catch Block
-		
+
 		finally
 		{
 			System.out.println("Program terminated successfully" );
