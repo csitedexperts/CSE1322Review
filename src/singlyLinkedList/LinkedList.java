@@ -51,11 +51,16 @@ public class LinkedList{
 
 	}
 
+	public void commonCodes(int id, String name) {if (isEmpty()) { head = new Node(id, name); return; } }
+	
 	public void append(int id, String name){
+		
 		if (head == null) {
 			head = new Node(id, name);
 			return; 
 		}
+		//commonCodes(id, name);
+		
 		Node currentHead = head;
 		while(currentHead.next != null) {
 			currentHead = currentHead.next;
@@ -68,6 +73,8 @@ public class LinkedList{
 			head = new Node(id, name);
 			return; 
 		}
+		// commonCodes(id, name);
+		
 		Node newHead = new Node(id, name);
 		// Connects the head field to the newHead 
 		

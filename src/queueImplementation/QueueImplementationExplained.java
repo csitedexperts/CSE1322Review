@@ -28,18 +28,18 @@ public class QueueImplementationExplained {
 
 		myq.enQueue(1, "AA");
 		
-		System.out.println("myq.top = " + myq.top);
+		System.out.println("myq.top = " + myq.head);
 		System.out.println("myq.tail = " + myq.tail);
 
-		System.out.println("myq.top.next = " + myq.top.next);
+		System.out.println("myq.top.next = " + myq.head.next);
 		System.out.println("myq.tail.next = " + myq.tail.next);
 
 		myq.enQueue(2, "BB");
 
-		System.out.println("myq.top = " + myq.top);
+		System.out.println("myq.top = " + myq.head);
 		System.out.println("myq.tail = " + myq.tail);
 
-		System.out.println("myq.top.next = " + myq.top.next);
+		System.out.println("myq.top.next = " + myq.head.next);
 		System.out.println("myq.tail.next = " + myq.tail.next);
 
 		myq.enQueue(3, "CC");

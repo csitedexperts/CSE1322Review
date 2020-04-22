@@ -1,24 +1,24 @@
 package queueImplementation;
 
 public class Queue {
-	Node top;
+	Node head;
 	Node tail;
 
 	Queue(){   // Optional 
-		top = null;  // null initialization
+		head = null;  // null initialization
 		tail = null;  // null initialization
 		// Here to show the head and tail always start as null
 	}
 
 	public boolean isEmpty() {
-		return (top == null);
+		return (head == null);
 	}
 
 	public void peek() {
 		if(isEmpty())
 			System.out.println("There is nothing to peek");
 		else {
-			System.out.println("The top node's id is : " + top.id);
+			System.out.println("The top node's id is : " + head.id);
 		}
 	}
 
@@ -34,8 +34,8 @@ public class Queue {
 	public void enQueue(int id, String name) {
 		Node node = new Node(id, name);
 		
-		if (tail == null) {
-			top = node;
+		if(isEmpty()) {
+			head = node;
 			tail = node;
 		}
 		else {
@@ -46,23 +46,23 @@ public class Queue {
 	}
 
 	public void deQueue() {
-		if (top == null) {
-			tail = null;
+		if (head == tail) {
+			//tail = null;
 			System.out.println("There is no node to delete" );
-			return;
+			//return;
 		}
 		else {
-			int id = top.id;
-			String name = top.name;
+			int id = head.id;
+			String name = head.name;
 			System.out.println("The node with Id: " + id + " and Name: "+ name + "  is deleted " );
-			top = top.next;
+			head = head.next;
 		}
 	}
 
 
 	public void displayAllNodes(){
 
-		Node thisNode = top;
+		Node thisNode = head;
 
 		while(thisNode != null){
 			thisNode.displayANode();

@@ -66,14 +66,14 @@ public class SinglyLinkedListMain {
 		System.out.println("===========================");
 */
 
-		LinkedList theLinkedList = new LinkedList();
+		LinkedList ll = new LinkedList();
 
-		theLinkedList.append(101, "Michael");
-		theLinkedList.prepend(102, "Sasah");
+		ll.append(101, "Michael");
+		ll.prepend(102, "Sasah");
 		
-		theLinkedList.append(103, "Braxton");
-		theLinkedList.append(104, "Lee");
-		theLinkedList.prepend(105, "Mokter");
+		ll.append(103, "Braxton");
+		ll.append(104, "Lee");
+		ll.prepend(105, "Mokter");
 		
 		
 		// Mokter -> Sarah -> Michael -> Braxton -> Lee
@@ -81,13 +81,13 @@ public class SinglyLinkedListMain {
 		
 		
 		//  105 > 102 > 101 > 103  > 104 
-		theLinkedList.displayAllNodes();
+		ll.displayAllNodes();
 
 		System.out.println("searchById()");
 
-		theLinkedList.searchById(103);
-		System.out.println("searchById2(): " + theLinkedList.searchById2(103));
-		System.out.println("searchById2(): " + theLinkedList.searchById2(1003));
+		ll.searchById(103);
+		System.out.println("searchById2(): " + ll.searchById2(103));
+		System.out.println("searchById2(): " + ll.searchById2(1003));
 			
 		
 

@@ -7,11 +7,12 @@ public class RecursiveAscendingOrderPrint {
 	}  
 
 	static void dawark(int n) {
-		if (n>=0)
+		if (n > 0)
 
 		{
-			System.out.print(n + "  ");
+			
 			dawark(n-1);  // recursion makes here
+			System.out.print(n + " ");
 		}
 	}
 
