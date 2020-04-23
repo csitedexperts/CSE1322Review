@@ -46,8 +46,8 @@ public class Queue {
 	}
 
 	public void deQueue() {
-		if (head == tail) {
-			//tail = null;
+		if ((head == null) || (tail == null)){
+			//That is head = tail = null;
 			System.out.println("There is no node to delete" );
 			//return;
 		}
