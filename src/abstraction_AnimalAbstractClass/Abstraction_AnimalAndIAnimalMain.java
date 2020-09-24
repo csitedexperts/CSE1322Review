@@ -60,7 +60,9 @@ public class Abstraction_AnimalAndIAnimalMain{
 		System.out.println("======================");
 		IAnimal d = new Dog();
 		d.animalColor();
-
+		
+		//Animal e = (Cat) new Animal();
+		
 	}
 }
 
