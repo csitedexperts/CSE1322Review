@@ -1,4 +1,4 @@
-package FurnitureClass;
+package InheritanceFurnitureClass;
 
 class Furniture{
 	public String name; 

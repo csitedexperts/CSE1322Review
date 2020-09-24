@@ -1,4 +1,4 @@
-package TreeClass;
+package InheritanceTreeClass;
 
 class Tree{
 	public String name; 
