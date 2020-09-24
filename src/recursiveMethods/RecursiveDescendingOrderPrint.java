@@ -9,8 +9,9 @@ public class RecursiveDescendingOrderPrint {
 	static int dawark(int n) {
 		if (n!=1)
 	{
-//			dawark(n-1);  // recursion makes here
 			System.out.print(dawark(n-1) + "  ");
+			dawark(n-1);  // recursion makes here
+		
 			return n + 1;
 		}
 		else {

@@ -1,5 +1,5 @@
 package recursiveMethods;
-public class LabA4B {
+public class RecursiveNumberSystemConversion {
 
 	public static String recursiveNSConversion(int number, int base) {
 		if(number>0) {

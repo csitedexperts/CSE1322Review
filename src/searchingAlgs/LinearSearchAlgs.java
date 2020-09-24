@@ -23,7 +23,7 @@ public class LinearSearchAlgs {
 
 		int[] myData = new int[] { 20, 7, 5, -3, 11, 5};
 
-		FindANumber(myData, 15);
+		FindANumber(myData, 7);
 		System.out.println("==================================");
 
 		FindMaxNumber(myData);

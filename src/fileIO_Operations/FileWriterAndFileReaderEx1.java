@@ -3,17 +3,17 @@ package fileIO_Operations;
 /* Writing into and Reading from a same Data File  */
 import java.io.*;
 
-public class J15_07{  
+public class FileWriterAndFileReaderEx1{  
 	public static void main(String[] args) throws IOException  {  
 		
 		FileWriter fws = new FileWriter("./myfile.txt");
 		
 		System.out.println("The file named myfile.txt is opened: ");
-		System.out.println("Write data and Press ENTER to display:");
-		FileOutputStream fos = new FileOutputStream("./myfile.txt");
+		System.out.println("Write data and Press A to display:");
+	
 		char c = (char)System.in.read();  // Reading  a Character
 
-		while(c != '\n')   // While not pressed ENTER
+		while(c != 65)   // While not pressed A
 		{
 			fws.write(c);  // Writting into file
 			c = (char)System.in.read();// Reading  a Character

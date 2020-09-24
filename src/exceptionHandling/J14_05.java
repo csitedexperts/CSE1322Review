@@ -15,8 +15,11 @@ public class J14_05
 		catch (ArithmeticException e) {
 			System.out.println("Value of d is undetermined");
 			System.out.println("\t(Division by zero)");  //ERROR Message
+			e.printStackTrace();
+		
 		}
-		d = z/(y-x);  // OK and displayed
+		
+		d = z/(y-3*x);  // OK and displayed
 		System.out.println("Now d = "+d);
 	}
 }

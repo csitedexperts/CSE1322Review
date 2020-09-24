@@ -57,7 +57,7 @@ class Stack {
 	}
 
 	public void pop() {
-		if (top == null) // if (isEmpty()== true)
+		if (this.top == null) // if (isEmpty()== true)
 		{
 			System.out.println("There is no node to delete" );
 			return;
@@ -66,7 +66,7 @@ class Stack {
 			int id = top.id;
 			String name = top.name;
 			System.out.println("Poped the node with Id: " + id + " and Name:" + name );
-			top = top.next;
+			this.top = this.top.next;
 		}
 	}
 
@@ -97,19 +97,23 @@ public class StackImplementationExplained {
 		Stack mys = new Stack();
 
 		mys.push(1, "AA");
+		
 		mys.push(2, "BB");
+
 		mys.push(3, "CC");
 		mys.push(4, "DD");
 		mys.push(5, "EE");
-		/*mys.pop();
+		mys.pop();
 		mys.peek();
-		 */
-		mys.displayAllNodes();
-		/*
+		
+		
+		//mys.displayAllNodes();
+		
 		mys.pop();
 		mys.pop();
 		mys.pop();
 		mys.pop();
+		
 		mys.pop();
 		mys.pop();
 		mys.pop();
@@ -119,7 +123,7 @@ public class StackImplementationExplained {
 		mys.peek();
 
 		mys.displayAllNodes();
-		 */
+		
 	}
 
 }

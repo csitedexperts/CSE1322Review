@@ -34,7 +34,7 @@ class Students{
 		// Blank Space ("  ") as delimiter
 	}
 }
-public class J15_08{  
+public class WritingAndReadingObjectsEx1{  
 	static void WriteData(Students[] S, PrintWriter PR) 
 			throws IOException
 	{  

@@ -1,10 +1,12 @@
 package abstraction_AnimalAbstractClass;
 // VehicleHierarchyEx1.java
-interface Vehicle{
+
+interface   Vehicle{
 	boolean hasAnEngine= true;
 	public void vehicleInfo();
 //	public static boolean isSameCar(Car c1, Car c2) ;
 }
+
 class Car implements Vehicle {
 	String make;
 	String model;
